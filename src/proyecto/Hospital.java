@@ -25,11 +25,9 @@ public class Hospital {
                 case 1:
                     paciente.agregarInfo();
 
-                    infoPacientes.add(paciente.toString() + "\n");
-                    System.out.println(enfermero.guardarDianostico());
                     break;
                 case 2:
-                    JOptionPane.showMessageDialog(null, "Lista de pacientes:\n" + infoPacientes,
+                    JOptionPane.showMessageDialog(null, "Lista de pacientes:\n" + paciente.toString(),
                             "Pacientes", 1);
                     
                     
