@@ -52,7 +52,6 @@ public class Paciente extends Persona {
     public String toString() {
 
         infoPaciente.put(this.getNumeroID(), super.toString() + " " + getTipoSangre() +"\n "+diagnostico.imprimir());
-        System.out.println(diagnostico.imprimir());
         setInfoPaciente(infoPaciente);
         Enumeration<String> enummeration = getInfoPaciente().elements();
         String mensaje = "";
