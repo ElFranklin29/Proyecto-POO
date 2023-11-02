@@ -110,9 +110,10 @@ public class Diagnostico {
 
         if ("Cansancio".equals(getSintoma1()) && "Conjuntivitis".equals(getSintoma2())
                 && "Dolor articular".equals(getSintoma3())) {
-            enfermedad = " Síndrome de fatiga crónica";
-            medicamentos = "Paracetamol, ibuprofeno, tramadol";
-            triage = "Grado 2";
+            
+            setEnfermedad(" Síndrome de fatiga crónica");
+        setMedicamentos("Paracetamol, ibuprofeno, tramadol");
+        setTriage("Grado 2");
 
         }
 
@@ -121,6 +122,7 @@ public class Diagnostico {
             enfermedad = "Gripe";
             medicamentos = " Ibuprofeno, paracetamol, acetaminofén";
             triage = "Grado 1";
+            
 
         }
 
@@ -129,6 +131,7 @@ public class Diagnostico {
             enfermedad = "Blefaritis";
             medicamentos = "Eritromicida y limpiador de párpados";
             triage = "Grado 2";
+            
 
         }
 
@@ -137,7 +140,7 @@ public class Diagnostico {
             enfermedad = "Artritis reumatoide";
             medicamentos = " Voltaren, prednisona";
             triage = "Grado 3";
-
+            
         }
 
         if ("Cansancio".equals(getSintoma1()) && "Diarrea".equals(getSintoma2())
@@ -145,6 +148,7 @@ public class Diagnostico {
             enfermedad = "Deshidratación severa";
             medicamentos = "Suero ";
             triage = "Grado 1";
+            
 
         }
 
@@ -153,6 +157,7 @@ public class Diagnostico {
             enfermedad = "Novovirus";
             medicamentos = "Reposición de líquidos y electrolitos";
             triage = "Grado 1";
+           
 
         }
 
@@ -161,6 +166,7 @@ public class Diagnostico {
             enfermedad = "Lupus";
             medicamentos = "Prednisona, ibuprofeno, aspirina";
             triage = "Grado 2";
+            
 
         }
 
@@ -169,6 +175,7 @@ public class Diagnostico {
             enfermedad = "Neumonía";
             medicamentos = "Amoxicilina, ceftriaxona y azitromicina";
             triage = "Grado 3";
+            
 
         }
 
@@ -177,7 +184,7 @@ public class Diagnostico {
             enfermedad = "Gripe";
             medicamentos = "Ibuprofeno, paracetamol, acetaminofén ";
             triage = "Grado 1";
-
+            
         }
 
         if ("Cansancio".equals(getSintoma1()) && "Dificultad para respirar".equals(getSintoma2())
@@ -185,13 +192,16 @@ public class Diagnostico {
             enfermedad = "Anemia";
             medicamentos = "Hierro, vitamina B12 ";
             triage = "Grado 3";
-
+            
+            
         }
 
         if ("Congestion nasal".equals(getSintoma1()) && "Conjuntivitis".equals(getSintoma2())
                 && "Tos".equals(getSintoma3())) {
             enfermedad = " Esclerosis múltiple";
             medicamentos = "Fingolimod y ocrelizumab";
+            
+            
 
         }
 
@@ -200,7 +210,7 @@ public class Diagnostico {
             enfermedad = "Neuritis vestibular  ";
             medicamentos = "Difenhidramina ";
             triage = "Grado 3";
-
+            
         }
 
         if ("Congestion nasal".equals(getSintoma1()) && "Diarrea".equals(getSintoma2())
@@ -208,6 +218,7 @@ public class Diagnostico {
             enfermedad = "Gastroenteritis viral   ";
             medicamentos = "Loperamida, subsalicilato, de dismuto  ";
             triage = "Grado 3";
+            
 
         }
 
@@ -216,6 +227,7 @@ public class Diagnostico {
             enfermedad = "Gripe";
             medicamentos = "Ibuprofeno, Paracetamol y Acetaminofen";
             triage = "Grado 1";
+            
 
         }
 
@@ -224,6 +236,7 @@ public class Diagnostico {
             enfermedad = "Gastroenteritis Viral";
             medicamentos = "Loperamida y Subsalicilato de Dismuto   ";
             triage = "Grado 3";
+            
 
         }
 
@@ -232,6 +245,7 @@ public class Diagnostico {
             enfermedad = "Artritis Reumatoide";
             medicamentos = "Voltaren y Prednison";
             triage = "Grado 3";
+            
 
         }
 
@@ -240,6 +254,7 @@ public class Diagnostico {
             enfermedad = "Asma";
             medicamentos = "Teufilina y Corticosteroide";
             triage = "Grado 2";
+            
 
         }
 
@@ -249,6 +264,7 @@ public class Diagnostico {
             enfermedad = "Hipertensión arterial";
             medicamentos = "Banazpril y Acebutalol";
             triage = "Grado 2";
+            
 
         }
 
@@ -257,6 +273,7 @@ public class Diagnostico {
             enfermedad = "Lupus";
             medicamentos = "Prednisona, Ibuprofeno y Aspirina ";
             triage = "Grado 2";
+            
 
         }
 
@@ -265,6 +282,7 @@ public class Diagnostico {
             enfermedad = "Dermatitis de Contacto";
             medicamentos = "Cefalexina y Loratadina";
             triage = "Grado 2";
+            
 
         }
 
@@ -273,6 +291,7 @@ public class Diagnostico {
             enfermedad = "Glaucoma";
             medicamentos = "Lotanoprost y Binzolamida";
             triage = "Grado 3";
+            
 
         }
 
@@ -281,7 +300,7 @@ public class Diagnostico {
             enfermedad = "Crohn";
             medicamentos = "Acetaminofén y Papsona";
             triage = "Grado 2";
-
+            
         }
 
         if ("Circulos oscuros debajo de los ojos".equals(getSintoma1()) && "Diarrea".equals(getSintoma2())
@@ -289,6 +308,7 @@ public class Diagnostico {
             enfermedad = "Gripa";
             medicamentos = "Ibuprofeno, Paracetamol y Acetaminofén";
             triage = "Grado 1";
+            
 
         }
 
@@ -297,6 +317,7 @@ public class Diagnostico {
             enfermedad = "Reflujo Gastroesofágico";
             medicamentos = "Maalox Y Rabeprazol";
             triage = "Grado 3";
+            
 
         }
 
@@ -305,7 +326,7 @@ public class Diagnostico {
             enfermedad = "Fibrosis pulmonar";
             medicamentos = "Pirfemidona y Nintedanib";
             triage = "Grado 3";
-
+            
         }
 
         if ("Circulos oscuros debajo de los ojos".equals(getSintoma1()) && "Dificultad para respirar".equals(getSintoma2())
@@ -313,6 +334,7 @@ public class Diagnostico {
             enfermedad = "EPOC";
             medicamentos = "Albuterol y Bromuro de Ipratropio";
             triage = "Grado 1";
+            
 
         }
 
@@ -321,12 +343,12 @@ public class Diagnostico {
             enfermedad = "Arritmia";
             medicamentos = " Amiodoroma y Metoprolol Diagnostico";
             triage = "Grado 3";
+            
 
         }
         
-        setEnfermedad(enfermedad);
-        setMedicamentos(medicamentos);
-        setTriage(triage);
+        System.out.println(enfermedad);
+        
 
     }
 
@@ -334,7 +356,7 @@ public class Diagnostico {
     public String imprimir() {
 
         return "Sus sintomas son: "+getSintoma1()+", "+getSintoma2()+" y "+ getSintoma3()+"\n"
-              +"Enfermedad: dsadsds\n"
+              +"Enfermedad: ala "+ getEnfermedad() +"\n"
               +"Medicamentos: "+getMedicamentos() +"\n"
               +"Triage: "+getTriage()+"\n"  ;
     }
