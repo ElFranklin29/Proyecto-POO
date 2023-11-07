@@ -1,3 +1,4 @@
+/*
 package proyecto;
 
 import java.util.Enumeration;
@@ -11,7 +12,7 @@ public class Paciente extends Persona {
     Diagnostico diagnostico = new Diagnostico();
 
     public Paciente(String tipoSangre,Hashtable<String, String> infoPaciente, String nombre, String apellido, String tipoID, 
-            String numeroID, String genero) {
+            int numeroID, String genero) {
         super(nombre, apellido, tipoID, numeroID, genero);
         this.tipoSangre = tipoSangre;
         this.infoPaciente = infoPaciente;
@@ -63,3 +64,4 @@ public class Paciente extends Persona {
     }
 
 }
+*/

@@ -8,11 +8,11 @@ public class Persona {
     private String nombre;
     private String apellido;
     private String tipoID;
-    private String numeroID;
+    private int numeroID;
     private String genero;
     
 
-    public Persona(String nombre, String apellido, String tipoID, String numeroID, String genero) {
+    public Persona(String nombre, String apellido, String tipoID, int numeroID, String genero) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.tipoID = tipoID;
@@ -27,7 +27,7 @@ public class Persona {
         this.nombre = " ";
         this.apellido = "";
         this.tipoID = " ";
-        this.numeroID = " ";
+        this.numeroID = 0;
         this.genero = " ";
    
     }
@@ -59,11 +59,11 @@ public class Persona {
         this.tipoID = tipoID;
     }
 
-    public String getNumeroID() {
+    public int getNumeroID() {
         return numeroID;
     }
 
-    public void setNumeroID(String numeroID) {
+    public void setNumeroID(int numeroID) {
         this.numeroID = numeroID;
     }
 
@@ -86,8 +86,8 @@ public class Persona {
             this.setTipoID("Cedula");
         }
 
-        this.setNumeroID(JOptionPane.showInputDialog(null, "Ingrese numero ID ",
-                "Numero ID", 1));
+        this.setNumeroID(Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese numero ID ",
+                "Numero ID", 1)));
 
         this.setNombre(JOptionPane.showInputDialog(null, "Ingrese nombre ",
                 "Nombre", 1));
@@ -106,10 +106,7 @@ public class Persona {
 
     }
 
-    @Override
-    public String toString() {
-        return "("+getTipoID()+": "+getNumeroID()+")"+" "+ getNombre()+" "+getApellido()+" "+"("+getGenero()+")";
-    }
+   
     
  
 

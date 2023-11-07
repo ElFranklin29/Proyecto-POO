@@ -17,6 +17,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
         initComponents();
         super.setLocationRelativeTo(null);
     }
+    
+    public void  obtenerHashTablePacientes(){
+        
+    
+    
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -106,10 +112,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacienteActionPerformed
-       VentanaPaciente ventanaPaciente = new VentanaPaciente();
-       ventanaPaciente.setVisible(true);
-       
-       
+        VentanaPaciente ventanaPaciente = new VentanaPaciente();
+        ventanaPaciente.setVisible(true);
+
+
     }//GEN-LAST:event_btnPacienteActionPerformed
 
     /**

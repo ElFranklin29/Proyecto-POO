@@ -14,7 +14,7 @@ public class Enfermero extends Persona {
     
     
 
-    public Enfermero(String lugarEstudio, String medicina, String nombre, String apellido, String tipoID, String numeroID,
+    public Enfermero(String lugarEstudio, String medicina, String nombre, String apellido, String tipoID, int numeroID,
             String genero) {
         super(nombre, apellido, tipoID, numeroID, genero);
         this.lugarEstudio = lugarEstudio;
@@ -45,13 +45,13 @@ public class Enfermero extends Persona {
     public Enfermero[] infoEnfermeros() {
 
         infoEnfermero[0] = new Enfermero("Manuela Beltran", "Null", "Felix",
-                "Montiel", "Cedula", "4563538", "Maculino");
+                "Montiel", "Cedula", 4563538, "Maculino");
         infoEnfermero[1] = new Enfermero("U.Distrital", "Null", "Alejandro",
-                "Parra", "Cedula", "1325668", "Maculino");
+                "Parra", "Cedula", 1325668, "Maculino");
         infoEnfermero[2] = new Enfermero("Manuela Beltran", "Null", "Sofia",
-                "Buritica", "Cedula", "363598", "Femenino");
+                "Buritica", "Cedula", 363598, "Femenino");
         infoEnfermero[3] = new Enfermero("U.Nacional", "Null", "Karen",
-                "Molano", "Cedula", "986545", "Femenino");
+                "Molano", "Cedula", 986545, "Femenino");
         return infoEnfermero;
     }
 

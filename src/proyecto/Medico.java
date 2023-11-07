@@ -8,7 +8,7 @@ public class Medico extends Persona {
    
     Medico[] infoMedico = new Medico[4];
 
-    public Medico(String lugarEstudio, String nombre, String apellido, String tipoID, String numeroID, String genero) {
+    public Medico(String lugarEstudio, String nombre, String apellido, String tipoID, int numeroID, String genero) {
         super(nombre, apellido, tipoID, numeroID, genero);
         this.lugarEstudio = lugarEstudio;
       
@@ -33,13 +33,13 @@ public class Medico extends Persona {
 
     public Medico[] infoMedicos() {
         infoMedico[0] = new Medico("Manuela Beltran",  "Jorge",
-                "Gutierrez", "Cedula", "778654", "Maculino");
+                "Gutierrez", "Cedula", 778654, "Maculino");
         infoMedico[1] = new Medico("Manuela Beltran",  "Hernan",
-                "Gonzales", "Cedula", "978325", "Maculino");
+                "Gonzales", "Cedula", 978325, "Maculino");
         infoMedico[2] = new Medico("Manuela Beltran", "Lucia",
-                "Clavijo", "Cedula", "897854", "Femenino");
+                "Clavijo", "Cedula", 897854, "Femenino");
         infoMedico[3] = new Medico("Manuela Beltran", "Valentina",
-                "Mora", "Cedula", "798213", "Femenino");
+                "Mora", "Cedula", 798213, "Femenino");
         return infoMedico;
     }
 

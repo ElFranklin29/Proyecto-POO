@@ -23,12 +23,12 @@ public class Diagnostico {
     }
 
     public Diagnostico() {
-        this.enfermedad = "";
-        this.medicamentos = "";
+        this.enfermedad = "No se ha diagnosticado enfermedad";
+        this.medicamentos = "No se ha diagnosticado medicamentos";
         this.sintoma1 = "";
         this.sintoma2 = "";
         this.sintoma3 = "";
-        this.triage = "";
+        this.triage = "No se ha diagnosticado triage";
         this.diagnostico = "";
     }
 
@@ -89,21 +89,26 @@ public class Diagnostico {
     }
 
     public void consultarSintomas() {
-        String[] sintoma1 = {"Selecciona", "Cansancio", "Congestion nasal", "Circulos oscuros debajo de los ojos"};
-        String[] sintoma2 = {"Selecciona", "Conjuntivitis", "Diarrea", "Dificultad para respirar"};
-        String[] sintoma3 = {"Selecciona", "Dolor articular", "Tos", "Mareo"};
+        String[] sint1 = {"Selecciona", "Cansancio", "Congestion nasal", "Circulos oscuros debajo de los ojos"};
+        String[] sint2 = {"Selecciona", "Conjuntivitis", "Diarrea", "Dificultad para respirar"};
+        String[] sint3 = {"Selecciona", "Dolor articular", "Tos", "Mareo"};
 
-        this.setSintoma1(JOptionPane.showInputDialog(null, "Seleccione el primer sintoma: ",
-                "Primer sintoma", JOptionPane.PLAIN_MESSAGE, null, sintoma1,
-                "Selecciona").toString());
+        
+        
+        sintoma1= JOptionPane.showInputDialog(null, "Seleccione el primer sintoma: ",
+                "Primer sintoma", JOptionPane.PLAIN_MESSAGE, null, sint1,
+                "Selecciona").toString();
+        this.setSintoma1(sintoma1);
 
-        this.setSintoma2(JOptionPane.showInputDialog(null, "Seleccione el segundo sintoma: ",
-                "Segundo sintoma", JOptionPane.PLAIN_MESSAGE, null, sintoma2,
-                "Selecciona").toString());
-
-        this.setSintoma3(JOptionPane.showInputDialog(null, "Seleccione el tercer sintoma: ",
-                "Tercer sintoma", JOptionPane.PLAIN_MESSAGE, null, sintoma3,
-                "Selecciona").toString());
+        sintoma2= JOptionPane.showInputDialog(null, "Seleccione el segundo sintoma: ",
+                "Segundo sintoma", JOptionPane.PLAIN_MESSAGE, null, sint2,
+                "Selecciona").toString();
+        this.setSintoma2(sintoma2);
+        
+        sintoma3=JOptionPane.showInputDialog(null, "Seleccione el tercer sintoma: ",
+                "Tercer sintoma", JOptionPane.PLAIN_MESSAGE, null, sint3,
+                "Selecciona").toString();
+        this.setSintoma3(sintoma3);
     }
 
     public void diagnosticoEnfermedad() {
@@ -347,7 +352,7 @@ public class Diagnostico {
 
         }
         
-        System.out.println(enfermedad);
+        
         
 
     }
@@ -356,9 +361,9 @@ public class Diagnostico {
     public String imprimir() {
 
         return "Sus sintomas son: "+getSintoma1()+", "+getSintoma2()+" y "+ getSintoma3()+"\n"
-              +"Enfermedad: ala "+ getEnfermedad() +"\n"
-              +"Medicamentos: "+getMedicamentos() +"\n"
-              +"Triage: "+getTriage()+"\n"  ;
+              +"Enfermedad:  "+ enfermedad +"\n"
+              +"Medicamentos: "+medicamentos  +"\n"
+              +"Triage: "+triage+"\n"  ;
     }
 
 }

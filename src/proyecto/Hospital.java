@@ -27,7 +27,7 @@ public class Hospital {
 
                     break;
                 case 2:
-                    JOptionPane.showMessageDialog(null, "Lista de pacientes:\n" + paciente.toString(),
+                    JOptionPane.showMessageDialog(null, "Lista de pacientes:\n"  ,
                             "Pacientes", 1);
                     
                     
