@@ -1,6 +1,7 @@
 package Presentacion;
 
 import javax.swing.JOptionPane;
+import proyecto.Diagnostico;
 import proyecto.PacienteDAO;
 import proyecto.PacienteVO;
 
@@ -8,9 +9,6 @@ public class VentanaPaciente extends javax.swing.JFrame {
 
     PacienteDAO pacienteDAO = new PacienteDAO();
 
-    
-  
-    
     public VentanaPaciente() {
         initComponents();
         setLocationRelativeTo(null);
@@ -40,13 +38,15 @@ public class VentanaPaciente extends javax.swing.JFrame {
         fieldSangre = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         panelSintomas = new javax.swing.JPanel();
-        txtSintomasRespiratorios = new javax.swing.JLabel();
-        boxSintomasRespiratorios = new javax.swing.JComboBox<>();
+        txtSistemaRepiratorio = new javax.swing.JLabel();
+        boxRepiratorios = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        boxSintomasRespiratorios1 = new javax.swing.JComboBox<>();
-        txtSintomasRespiratorios1 = new javax.swing.JLabel();
-        boxSintomasRespiratorios2 = new javax.swing.JComboBox<>();
-        txtSintomasRespiratorios2 = new javax.swing.JLabel();
+        txtCirculatorio = new javax.swing.JLabel();
+        txtSistemaDigestivo = new javax.swing.JLabel();
+        txtAbdomen = new javax.swing.JLabel();
+        boxDigestivos = new javax.swing.JComboBox<>();
+        boxGenerales = new javax.swing.JComboBox<>();
+        txtSistemaRepiratorio2 = new javax.swing.JLabel();
         btnEliminarPaciente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -119,7 +119,7 @@ public class VentanaPaciente extends javax.swing.JFrame {
         txtGenero.setText("Genero");
 
         boxGenero.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
-        boxGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE GENERO", "Masculino\t", "Femenino" }));
+        boxGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione genero", "Masculino\t", "Femenino" }));
 
         txtSangre.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
         txtSangre.setText("Tipo de sangre");
@@ -138,7 +138,7 @@ public class VentanaPaciente extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelnfoPersonalLayout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtNumeroDocumento, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtTipoDocumento, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -190,53 +190,60 @@ public class VentanaPaciente extends javax.swing.JFrame {
 
         panelSintomas.setBackground(new java.awt.Color(235, 245, 251));
 
-        txtSintomasRespiratorios.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
-        txtSintomasRespiratorios.setText("Sintomas Respiratorios");
+        txtSistemaRepiratorio.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtSistemaRepiratorio.setText("Sistema respiratorio/");
 
-        boxSintomasRespiratorios.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
-        boxSintomasRespiratorios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Tipo Documento", "Cedula", "Tarjeta De Identidad", "Otro" }));
+        boxRepiratorios.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+        boxRepiratorios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Presion arterial", "Taquicardia", "Tos" }));
 
         jLabel2.setFont(new java.awt.Font("OCR A Extended", 1, 15)); // NOI18N
         jLabel2.setText("Sintomas");
 
-        boxSintomasRespiratorios1.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
-        boxSintomasRespiratorios1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Tipo Documento", "Cedula", "Tarjeta De Identidad", "Otro" }));
+        txtCirculatorio.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtCirculatorio.setText("circulatorio");
 
-        txtSintomasRespiratorios1.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
-        txtSintomasRespiratorios1.setText("Sintomas Respiratorios");
+        txtSistemaDigestivo.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtSistemaDigestivo.setText("Sistema digestivo/");
 
-        boxSintomasRespiratorios2.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
-        boxSintomasRespiratorios2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Tipo Documento", "Cedula", "Tarjeta De Identidad", "Otro" }));
+        txtAbdomen.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtAbdomen.setText("abdomen");
 
-        txtSintomasRespiratorios2.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
-        txtSintomasRespiratorios2.setText("Sintomas Respiratorios");
+        boxDigestivos.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+        boxDigestivos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Vomito", "Estreñimiento", "Ruidos intestinales" }));
+
+        boxGenerales.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+        boxGenerales.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Fiebre", "Dolor de cabeza", "Cansancio" }));
+
+        txtSistemaRepiratorio2.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtSistemaRepiratorio2.setText("Generales");
 
         javax.swing.GroupLayout panelSintomasLayout = new javax.swing.GroupLayout(panelSintomas);
         panelSintomas.setLayout(panelSintomasLayout);
         panelSintomasLayout.setHorizontalGroup(
             panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelSintomasLayout.createSequentialGroup()
-                .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panelSintomasLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtSistemaRepiratorio)
+                            .addComponent(txtCirculatorio))
+                        .addGap(18, 18, 18)
+                        .addComponent(boxRepiratorios, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panelSintomasLayout.createSequentialGroup()
                         .addGap(181, 181, 181)
                         .addComponent(jLabel2))
                     .addGroup(panelSintomasLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(panelSintomasLayout.createSequentialGroup()
-                                    .addComponent(txtSintomasRespiratorios2)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boxSintomasRespiratorios2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(panelSintomasLayout.createSequentialGroup()
-                                    .addComponent(txtSintomasRespiratorios1)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(boxSintomasRespiratorios1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(panelSintomasLayout.createSequentialGroup()
-                                .addComponent(txtSintomasRespiratorios)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(boxSintomasRespiratorios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(13, Short.MAX_VALUE))
+                        .addGap(42, 42, 42)
+                        .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtSistemaDigestivo)
+                            .addComponent(txtAbdomen)
+                            .addComponent(txtSistemaRepiratorio2))
+                        .addGap(18, 18, 18)
+                        .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(boxDigestivos, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(boxGenerales, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
         panelSintomasLayout.setVerticalGroup(
             panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -245,17 +252,21 @@ public class VentanaPaciente extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSintomasRespiratorios)
-                    .addComponent(boxSintomasRespiratorios, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                    .addComponent(boxRepiratorios, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSistemaRepiratorio))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtCirculatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSintomasRespiratorios1)
-                    .addComponent(boxSintomasRespiratorios1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                    .addComponent(boxDigestivos, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSistemaDigestivo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtAbdomen, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSintomasRespiratorios2)
-                    .addComponent(boxSintomasRespiratorios2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50))
+                    .addComponent(boxGenerales, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSistemaRepiratorio2))
+                .addGap(68, 68, 68))
         );
 
         btnEliminarPaciente.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
@@ -271,29 +282,30 @@ public class VentanaPaciente extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 24, Short.MAX_VALUE)
+                .addGap(0, 28, Short.MAX_VALUE)
                 .addComponent(panelnfoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(panelSintomas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addGap(27, 27, 27))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addComponent(btnEliminarPaciente)
+                        .addGap(30, 30, 30)
+                        .addComponent(btnMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(btnModificar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(366, 366, 366)
+                        .addComponent(btnRegistrar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(347, 347, 347)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(14, 14, 14)
                                 .addComponent(txtRegistrados))
-                            .addComponent(fastAndCareful)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(164, 164, 164)
-                        .addComponent(btnEliminarPaciente)
-                        .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnMostrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(36, 36, 36)
-                        .addComponent(btnModificar)))
+                            .addComponent(fastAndCareful))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -305,16 +317,16 @@ public class VentanaPaciente extends javax.swing.JFrame {
                 .addComponent(txtRegistrados)
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelnfoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelSintomas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(panelnfoPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelSintomas, javax.swing.GroupLayout.PREFERRED_SIZE, 258, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addComponent(btnRegistrar)
-                .addGap(37, 37, 37)
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEliminarPaciente)
+                    .addComponent(btnMostrar)
                     .addComponent(btnModificar)
-                    .addComponent(btnMostrar))
-                .addContainerGap(29, Short.MAX_VALUE))
+                    .addComponent(btnEliminarPaciente))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
@@ -322,19 +334,21 @@ public class VentanaPaciente extends javax.swing.JFrame {
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         registrarPaciente();
-        
+
         fieldNumeroDocumento.setText("");
         fieldNombre.setText("");
         fieldApellido.setText("");
         fieldSangre.setText("");
         boxTipoDoc.setSelectedIndex(0);
         boxGenero.setSelectedIndex(0);
-
+        boxRepiratorios.setSelectedIndex(0);
+        boxDigestivos.setSelectedIndex(0);
+        boxGenerales.setSelectedIndex(0);
 
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
-        int codigo=Integer.parseInt(JOptionPane.showInputDialog("Ingrese documento del paciente que desea actualizar"));
+        int codigo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese documento del paciente que desea actualizar"));
         pacienteDAO.actualizarPaciente(codigo, pacienteDAO);
     }//GEN-LAST:event_btnModificarActionPerformed
 
@@ -347,13 +361,13 @@ public class VentanaPaciente extends javax.swing.JFrame {
     }//GEN-LAST:event_fieldNombreActionPerformed
 
     private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
-            MostrarPaciente mostrar= new MostrarPaciente(pacienteDAO.getInfoPaciente(), pacienteDAO);
-            mostrar.setVisible(true);
-            
+        MostrarPaciente mostrar = new MostrarPaciente(pacienteDAO.getInfoPaciente(), pacienteDAO);
+        mostrar.setVisible(true);
+
     }//GEN-LAST:event_btnMostrarActionPerformed
 
     private void btnEliminarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarPacienteActionPerformed
-        int codigo=Integer.parseInt(JOptionPane.showInputDialog("Ingrese documento del paciente que desea eliminar"));
+        int codigo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese documento del paciente que desea eliminar"));
         pacienteDAO.eliminarPaciente(codigo);
     }//GEN-LAST:event_btnEliminarPacienteActionPerformed
     public static void main(String args[]) {
@@ -390,10 +404,10 @@ public class VentanaPaciente extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> boxDigestivos;
+    private javax.swing.JComboBox<String> boxGenerales;
     private javax.swing.JComboBox<String> boxGenero;
-    private javax.swing.JComboBox<String> boxSintomasRespiratorios;
-    private javax.swing.JComboBox<String> boxSintomasRespiratorios1;
-    private javax.swing.JComboBox<String> boxSintomasRespiratorios2;
+    private javax.swing.JComboBox<String> boxRepiratorios;
     private javax.swing.JComboBox<String> boxTipoDoc;
     private javax.swing.JButton btnEliminarPaciente;
     private javax.swing.JButton btnModificar;
@@ -408,23 +422,22 @@ public class VentanaPaciente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel panelSintomas;
     private javax.swing.JPanel panelnfoPersonal;
+    private javax.swing.JLabel txtAbdomen;
     private javax.swing.JLabel txtApellido;
+    private javax.swing.JLabel txtCirculatorio;
     private javax.swing.JLabel txtGenero;
     private javax.swing.JLabel txtNombre;
     private javax.swing.JLabel txtNumeroDocumento;
     private javax.swing.JLabel txtRegistrados;
     private javax.swing.JLabel txtSangre;
-    private javax.swing.JLabel txtSintomasRespiratorios;
-    private javax.swing.JLabel txtSintomasRespiratorios1;
-    private javax.swing.JLabel txtSintomasRespiratorios2;
+    private javax.swing.JLabel txtSistemaDigestivo;
+    private javax.swing.JLabel txtSistemaRepiratorio;
+    private javax.swing.JLabel txtSistemaRepiratorio2;
     private javax.swing.JLabel txtTipoDocumento;
     // End of variables declaration//GEN-END:variables
 
- 
-
     private void registrarPaciente() {
-        
-        
+
         PacienteVO pacienteVO = new PacienteVO();
         pacienteVO.setNumeroID(Integer.parseInt(fieldNumeroDocumento.getText()));
         pacienteVO.setTipoID((String) boxTipoDoc.getSelectedItem());
@@ -433,9 +446,14 @@ public class VentanaPaciente extends javax.swing.JFrame {
         pacienteVO.setGenero((String) boxGenero.getSelectedItem());
         pacienteVO.setTipoSangre(fieldSangre.getText());
 
+        pacienteVO.setSintomaRespiratorio((String) boxRepiratorios.getSelectedItem());
+        pacienteVO.setSintomaDigestivo((String) boxDigestivos.getSelectedItem());
+        pacienteVO.setSintomaGeneral((String) boxGenerales.getSelectedItem());
+
         pacienteDAO.registrarPaciente(pacienteVO);
-        
-        
+
+        Diagnostico diagnostico = new Diagnostico();
+        diagnostico.dianosticarPaciente(pacienteVO);
 
     }
 

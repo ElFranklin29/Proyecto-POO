@@ -4,6 +4,7 @@ import Presentacion.ActualizarPaciente;
 import java.util.Hashtable;
 import javax.swing.JOptionPane;
 
+
 public class PacienteDAO {
 
     private Hashtable<Integer, PacienteVO> infoPaciente;
@@ -69,6 +70,8 @@ public class PacienteDAO {
     }
 
     public void modificarPaciente(PacienteVO pacienteVO) {
+        Diagnostico diagnostico= new Diagnostico();
+        diagnostico.dianosticarPaciente(pacienteVO);
         getInfoPaciente().replace(pacienteVO.getNumeroID(), pacienteVO);
     }
 

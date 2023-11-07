@@ -46,17 +46,17 @@ public class MostrarPaciente extends javax.swing.JFrame {
         tablaPacientes.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
         tablaPacientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Tipo Documento", "Numero Documento", "Nombre", "Apellido", "Genero", "Tipo De Sangre "
+                "Tipo Documento", "Numero Documento", "Nombre", "Apellido", "Genero", "Tipo De Sangre ", "Sintoma 1", "Sintoma 2", "Sintoma 3", "Enfermedad", "Triage"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -79,12 +79,12 @@ public class MostrarPaciente extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 924, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnCerrarventana)
-                .addGap(285, 285, 285))
+                .addGap(369, 369, 369))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,7 +106,7 @@ public class MostrarPaciente extends javax.swing.JFrame {
     public void llenarTabla(Hashtable<Integer, PacienteVO> infoPaciente) {
         
         DefaultTableModel mt = new DefaultTableModel(new String[]{"Tipo Documento", "Numero Documento", "Nombre","Apellido","Genero",
-            "Tipo De Sangre"}, infoPaciente.size());
+            "Tipo De Sangre","Sintoma 1", "Sintoma 2", "Sintoma 3","Enfermedad", "Triage"}, infoPaciente.size());
 
         tablaPacientes.setModel(mt);
         
@@ -121,6 +121,12 @@ public class MostrarPaciente extends javax.swing.JFrame {
             modeloDatos.setValueAt( e.getApellido(), i, 3);
             modeloDatos.setValueAt(e.getGenero(), i, 4);
             modeloDatos.setValueAt(e.getTipoSangre(), i, 5);
+            modeloDatos.setValueAt(e.getSintomaRespiratorio(), i, 6);
+            modeloDatos.setValueAt(e.getSintomaDigestivo(), i, 7);
+            modeloDatos.setValueAt(e.getSintomaGeneral(), i, 8);
+            modeloDatos.setValueAt(e.getEnfermedad(), i, 9);
+            modeloDatos.setValueAt(e.getTriage(), i, 10);
+            
         }
         
         
