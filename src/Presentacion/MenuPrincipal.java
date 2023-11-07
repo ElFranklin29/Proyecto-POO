@@ -3,25 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Presentacion;
+import javax.swing.JOptionPane;
+import proyecto.Diagnostico;
+import proyecto.PacienteDAO;
+import proyecto.PacienteVO;
 
-/**
- *
- * @author HOME
- */
 public class MenuPrincipal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form MenuPrincipal
-     */
+    PacienteDAO pacienteDAO = new PacienteDAO();
+    
     public MenuPrincipal() {
         initComponents();
         super.setLocationRelativeTo(null);
-    }
-    
-    public void  obtenerHashTablePacientes(){
-        
-    
-    
     }
 
     /**
@@ -33,90 +26,429 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        fastAndCareful = new javax.swing.JLabel();
-        seleccione = new javax.swing.JLabel();
-        btnPaciente = new javax.swing.JButton();
-        btnEnfermero = new javax.swing.JButton();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        panelPaciente = new javax.swing.JPanel();
+        panelnfoPersonal = new javax.swing.JPanel();
+        txtNumeroDocumento = new javax.swing.JLabel();
+        fieldNumeroDocumento = new javax.swing.JTextField();
+        txtTipoDocumento = new javax.swing.JLabel();
+        boxTipoDoc = new javax.swing.JComboBox<>();
+        txtNombre = new javax.swing.JLabel();
+        fieldNombre = new javax.swing.JTextField();
+        txtApellido = new javax.swing.JLabel();
+        fieldApellido = new javax.swing.JTextField();
+        txtGenero = new javax.swing.JLabel();
+        boxGenero = new javax.swing.JComboBox<>();
+        txtSangre = new javax.swing.JLabel();
+        fieldSangre = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        panelSintomas = new javax.swing.JPanel();
+        txtSistemaRepiratorio = new javax.swing.JLabel();
+        boxRepiratorios = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        txtCirculatorio = new javax.swing.JLabel();
+        txtSistemaDigestivo = new javax.swing.JLabel();
+        txtAbdomen = new javax.swing.JLabel();
+        boxDigestivos = new javax.swing.JComboBox<>();
+        boxGenerales = new javax.swing.JComboBox<>();
+        txtSistemaRepiratorio2 = new javax.swing.JLabel();
+        btnRegistrar = new javax.swing.JButton();
+        btnMostrar = new javax.swing.JButton();
+        btnEliminarPaciente = new javax.swing.JButton();
+        btnModificar = new javax.swing.JButton();
+        fastAndCareful1 = new javax.swing.JLabel();
+        txtRegistrados = new javax.swing.JLabel();
+        panelDoctor = new javax.swing.JPanel();
+        panelEnfermero = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        fastAndCareful = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
+
+        panelPaciente.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+
+        panelnfoPersonal.setBackground(new java.awt.Color(235, 245, 251));
+
+        txtNumeroDocumento.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtNumeroDocumento.setText("Numero de documento");
+
+        fieldNumeroDocumento.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+        fieldNumeroDocumento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldNumeroDocumentoActionPerformed(evt);
+            }
+        });
+
+        txtTipoDocumento.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtTipoDocumento.setText("Tipo de documento");
+
+        boxTipoDoc.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+        boxTipoDoc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Tipo Documento", "Cedula", "Tarjeta De Identidad", "Otro" }));
+
+        txtNombre.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtNombre.setText("Primer nombre");
+
+        fieldNombre.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+        fieldNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldNombreActionPerformed(evt);
+            }
+        });
+
+        txtApellido.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtApellido.setText("Primer apellido");
+
+        fieldApellido.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+
+        txtGenero.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtGenero.setText("Genero");
+
+        boxGenero.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+        boxGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione genero", "Masculino\t", "Femenino" }));
+
+        txtSangre.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtSangre.setText("Tipo de sangre");
+
+        fieldSangre.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("OCR A Extended", 1, 15)); // NOI18N
+        jLabel1.setText("Informacion Personal");
+
+        javax.swing.GroupLayout panelnfoPersonalLayout = new javax.swing.GroupLayout(panelnfoPersonal);
+        panelnfoPersonal.setLayout(panelnfoPersonalLayout);
+        panelnfoPersonalLayout.setHorizontalGroup(
+            panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelnfoPersonalLayout.createSequentialGroup()
+                .addGap(145, 145, 145)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelnfoPersonalLayout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtNumeroDocumento, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtTipoDocumento, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtApellido, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtGenero, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtSangre, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(boxTipoDoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(boxGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldNumeroDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldSangre, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15))
+        );
+        panelnfoPersonalLayout.setVerticalGroup(
+            panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelnfoPersonalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtTipoDocumento)
+                    .addComponent(boxTipoDoc, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtNumeroDocumento)
+                    .addComponent(fieldNumeroDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtNombre)
+                    .addComponent(fieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fieldApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtApellido))
+                .addGap(15, 15, 15)
+                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtGenero)
+                    .addComponent(boxGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtSangre)
+                    .addComponent(fieldSangre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+
+        panelSintomas.setBackground(new java.awt.Color(235, 245, 251));
+
+        txtSistemaRepiratorio.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtSistemaRepiratorio.setText("Sistema respiratorio/");
+
+        boxRepiratorios.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+        boxRepiratorios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Presion arterial", "Taquicardia", "Tos" }));
+
+        jLabel2.setFont(new java.awt.Font("OCR A Extended", 1, 15)); // NOI18N
+        jLabel2.setText("Sintomas");
+
+        txtCirculatorio.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtCirculatorio.setText("circulatorio");
+
+        txtSistemaDigestivo.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtSistemaDigestivo.setText("Sistema digestivo/");
+
+        txtAbdomen.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtAbdomen.setText("abdomen");
+
+        boxDigestivos.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+        boxDigestivos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Vomito", "Estreñimiento", "Ruidos intestinales" }));
+
+        boxGenerales.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+        boxGenerales.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Fiebre", "Dolor de cabeza", "Cansancio" }));
+
+        txtSistemaRepiratorio2.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtSistemaRepiratorio2.setText("Generales");
+
+        javax.swing.GroupLayout panelSintomasLayout = new javax.swing.GroupLayout(panelSintomas);
+        panelSintomas.setLayout(panelSintomasLayout);
+        panelSintomasLayout.setHorizontalGroup(
+            panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelSintomasLayout.createSequentialGroup()
+                .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panelSintomasLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtSistemaRepiratorio)
+                            .addComponent(txtCirculatorio))
+                        .addGap(18, 18, 18)
+                        .addComponent(boxRepiratorios, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panelSintomasLayout.createSequentialGroup()
+                        .addGap(181, 181, 181)
+                        .addComponent(jLabel2))
+                    .addGroup(panelSintomasLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtSistemaDigestivo)
+                            .addComponent(txtAbdomen)
+                            .addComponent(txtSistemaRepiratorio2))
+                        .addGap(18, 18, 18)
+                        .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(boxDigestivos, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(boxGenerales, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+        panelSintomasLayout.setVerticalGroup(
+            panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelSintomasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(boxRepiratorios, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSistemaRepiratorio))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtCirculatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(boxDigestivos, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSistemaDigestivo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtAbdomen, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(panelSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(boxGenerales, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSistemaRepiratorio2))
+                .addGap(68, 68, 68))
+        );
+
+        btnRegistrar.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        btnRegistrar.setText("Registrar Paciente");
+        btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarActionPerformed(evt);
+            }
+        });
+
+        btnMostrar.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        btnMostrar.setText("Mostrar Pacientes");
+        btnMostrar.setToolTipText("");
+        btnMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarActionPerformed(evt);
+            }
+        });
+
+        btnEliminarPaciente.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        btnEliminarPaciente.setText("Eliminar Paciente");
+        btnEliminarPaciente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarPacienteActionPerformed(evt);
+            }
+        });
+
+        btnModificar.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        btnModificar.setText("Modificar Paciente");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
+
+        fastAndCareful1.setFont(new java.awt.Font("OCR A Extended", 1, 28)); // NOI18N
+        fastAndCareful1.setText("PACIENTE");
+
+        txtRegistrados.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
+        txtRegistrados.setText("Registrar un paciente");
+
+        javax.swing.GroupLayout panelPacienteLayout = new javax.swing.GroupLayout(panelPaciente);
+        panelPaciente.setLayout(panelPacienteLayout);
+        panelPacienteLayout.setHorizontalGroup(
+            panelPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPacienteLayout.createSequentialGroup()
+                .addGroup(panelPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPacienteLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(panelnfoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(panelSintomas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelPacienteLayout.createSequentialGroup()
+                        .addGap(192, 192, 192)
+                        .addComponent(btnEliminarPaciente)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnModificar))
+                    .addGroup(panelPacienteLayout.createSequentialGroup()
+                        .addGap(408, 408, 408)
+                        .addComponent(fastAndCareful1)))
+                .addContainerGap(30, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPacienteLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(panelPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPacienteLayout.createSequentialGroup()
+                        .addComponent(txtRegistrados)
+                        .addGap(350, 350, 350))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPacienteLayout.createSequentialGroup()
+                        .addComponent(btnRegistrar)
+                        .addGap(357, 357, 357))))
+        );
+        panelPacienteLayout.setVerticalGroup(
+            panelPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPacienteLayout.createSequentialGroup()
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addComponent(fastAndCareful1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtRegistrados)
+                .addGap(24, 24, 24)
+                .addGroup(panelPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelnfoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelSintomas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRegistrar)
+                .addGap(18, 18, 18)
+                .addGroup(panelPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnMostrar)
+                    .addComponent(btnModificar)
+                    .addComponent(btnEliminarPaciente))
+                .addGap(23, 23, 23))
+        );
+
+        jTabbedPane1.addTab("Paciente", panelPaciente);
+
+        panelDoctor.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+
+        javax.swing.GroupLayout panelDoctorLayout = new javax.swing.GroupLayout(panelDoctor);
+        panelDoctor.setLayout(panelDoctorLayout);
+        panelDoctorLayout.setHorizontalGroup(
+            panelDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 940, Short.MAX_VALUE)
+        );
+        panelDoctorLayout.setVerticalGroup(
+            panelDoctorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 480, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Doctor(a)", panelDoctor);
+
+        panelEnfermero.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+
+        jButton1.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
+        jButton1.setText("Administrar Camas");
+
+        javax.swing.GroupLayout panelEnfermeroLayout = new javax.swing.GroupLayout(panelEnfermero);
+        panelEnfermero.setLayout(panelEnfermeroLayout);
+        panelEnfermeroLayout.setHorizontalGroup(
+            panelEnfermeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelEnfermeroLayout.createSequentialGroup()
+                .addGap(301, 301, 301)
+                .addComponent(jButton1)
+                .addContainerGap(490, Short.MAX_VALUE))
+        );
+        panelEnfermeroLayout.setVerticalGroup(
+            panelEnfermeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelEnfermeroLayout.createSequentialGroup()
+                .addContainerGap(386, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(73, 73, 73))
+        );
+
+        jTabbedPane1.addTab("Enfermerx", panelEnfermero);
 
         fastAndCareful.setFont(new java.awt.Font("Impact", 0, 36)); // NOI18N
         fastAndCareful.setText("FAST AND CAREFUL (F&C)");
-
-        seleccione.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
-        seleccione.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        seleccione.setText("Seleccione su rol: ");
-
-        btnPaciente.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
-        btnPaciente.setText("Paciente");
-        btnPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPacienteActionPerformed(evt);
-            }
-        });
-
-        btnEnfermero.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
-        btnEnfermero.setText("Enfermero");
-
-        jButton1.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
-        jButton1.setText("Medico");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(187, 187, 187)
-                        .addComponent(fastAndCareful))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addComponent(seleccione))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(btnPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(86, 86, 86)
-                        .addComponent(btnEnfermero)
-                        .addGap(94, 94, 94)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(114, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(fastAndCareful)
+                .addGap(300, 300, 300))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(fastAndCareful)
-                .addGap(37, 37, 37)
-                .addComponent(seleccione)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEnfermero, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(86, 86, 86))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane1)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void fieldNumeroDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNumeroDocumentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_fieldNumeroDocumentoActionPerformed
 
-    private void btnPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacienteActionPerformed
-        VentanaPaciente ventanaPaciente = new VentanaPaciente();
-        ventanaPaciente.setVisible(true);
+    private void fieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldNombreActionPerformed
 
+    private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
+        registrarPaciente();
 
-    }//GEN-LAST:event_btnPacienteActionPerformed
+        fieldNumeroDocumento.setText("");
+        fieldNombre.setText("");
+        fieldApellido.setText("");
+        fieldSangre.setText("");
+        boxTipoDoc.setSelectedIndex(0);
+        boxGenero.setSelectedIndex(0);
+        boxRepiratorios.setSelectedIndex(0);
+        boxDigestivos.setSelectedIndex(0);
+        boxGenerales.setSelectedIndex(0);
+    }//GEN-LAST:event_btnRegistrarActionPerformed
+
+    private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
+        MostrarPaciente mostrar = new MostrarPaciente(pacienteDAO.getInfoPaciente(), pacienteDAO);
+        mostrar.setVisible(true);
+    }//GEN-LAST:event_btnMostrarActionPerformed
+
+    private void btnEliminarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarPacienteActionPerformed
+        int codigo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese documento del paciente que desea eliminar"));
+        pacienteDAO.eliminarPaciente(codigo);
+    }//GEN-LAST:event_btnEliminarPacienteActionPerformed
+
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        int codigo = Integer.parseInt(JOptionPane.showInputDialog("Ingrese documento del paciente que desea actualizar"));
+        pacienteDAO.actualizarPaciente(codigo, pacienteDAO);
+    }//GEN-LAST:event_btnModificarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,6 +476,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -154,10 +487,65 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnEnfermero;
-    private javax.swing.JButton btnPaciente;
+    private javax.swing.JComboBox<String> boxDigestivos;
+    private javax.swing.JComboBox<String> boxGenerales;
+    private javax.swing.JComboBox<String> boxGenero;
+    private javax.swing.JComboBox<String> boxRepiratorios;
+    private javax.swing.JComboBox<String> boxTipoDoc;
+    private javax.swing.JButton btnEliminarPaciente;
+    private javax.swing.JButton btnModificar;
+    private javax.swing.JButton btnMostrar;
+    private javax.swing.JButton btnRegistrar;
     private javax.swing.JLabel fastAndCareful;
+    private javax.swing.JLabel fastAndCareful1;
+    private javax.swing.JTextField fieldApellido;
+    private javax.swing.JTextField fieldNombre;
+    private javax.swing.JTextField fieldNumeroDocumento;
+    private javax.swing.JTextField fieldSangre;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel seleccione;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JPanel panelDoctor;
+    private javax.swing.JPanel panelEnfermero;
+    private javax.swing.JPanel panelPaciente;
+    private javax.swing.JPanel panelSintomas;
+    private javax.swing.JPanel panelnfoPersonal;
+    private javax.swing.JLabel txtAbdomen;
+    private javax.swing.JLabel txtApellido;
+    private javax.swing.JLabel txtCirculatorio;
+    private javax.swing.JLabel txtGenero;
+    private javax.swing.JLabel txtNombre;
+    private javax.swing.JLabel txtNumeroDocumento;
+    private javax.swing.JLabel txtRegistrados;
+    private javax.swing.JLabel txtSangre;
+    private javax.swing.JLabel txtSistemaDigestivo;
+    private javax.swing.JLabel txtSistemaRepiratorio;
+    private javax.swing.JLabel txtSistemaRepiratorio2;
+    private javax.swing.JLabel txtTipoDocumento;
     // End of variables declaration//GEN-END:variables
+
+
+ private void registrarPaciente() {
+        PacienteVO pacienteVO = new PacienteVO();
+        pacienteVO.setNumeroID(Integer.parseInt(fieldNumeroDocumento.getText()));
+        pacienteVO.setTipoID((String) boxTipoDoc.getSelectedItem());
+        pacienteVO.setNombre(fieldNombre.getText());
+        pacienteVO.setApellido(fieldApellido.getText());
+        pacienteVO.setGenero((String) boxGenero.getSelectedItem());
+        pacienteVO.setTipoSangre(fieldSangre.getText());
+
+        pacienteVO.setSintomaRespiratorio((String) boxRepiratorios.getSelectedItem());
+        pacienteVO.setSintomaDigestivo((String) boxDigestivos.getSelectedItem());
+        pacienteVO.setSintomaGeneral((String) boxGenerales.getSelectedItem());
+
+        pacienteDAO.registrarPaciente(pacienteVO);
+
+        Diagnostico diagnostico = new Diagnostico();
+        diagnostico.dianosticarPaciente(pacienteVO);
+
+    }
+
+
+
 }

@@ -1,21 +1,27 @@
 package proyecto;
 
-import javax.swing.JOptionPane;
+
 
 public class Diagnostico extends PacienteDAO {
 
     private String enfermedad;
     private String triage;
+    private boolean cama;
+   
 
-    public Diagnostico(String enfermedad, String triage) {
+    public Diagnostico(String enfermedad, String triage, boolean cama) {
         this.enfermedad = enfermedad;
         this.triage = triage;
+        this.cama = cama;
     }
-
+    
     public Diagnostico() {
         this.enfermedad = "";
         this.triage = "";
+        this.cama = false;
     }
+
+     
 
     public String getEnfermedad() {
         return enfermedad;
@@ -156,7 +162,12 @@ public class Diagnostico extends PacienteDAO {
             pacienteVO.setTriage(triage);
             pacienteVO.setEnfermedad(enfermedad);
         }
+        
+
 
     }
+    
+      
+    
 
 }

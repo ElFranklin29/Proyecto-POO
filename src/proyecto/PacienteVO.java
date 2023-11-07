@@ -29,9 +29,6 @@ public class PacienteVO extends Persona{
         this.enfermedad = "";
     }
 
-    
-    
-    
     public String getTriage() {
         return triage;
     }
