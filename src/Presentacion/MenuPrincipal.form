@@ -77,13 +77,13 @@
                               <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
                               <Component id="btnEliminarPaciente" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnMostrar" min="-2" pref="192" max="-2" attributes="0"/>
+                              <Component id="btnMostrarPaciente" min="-2" pref="192" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="btnModificar" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnModificarPaciente" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="408" max="-2" attributes="0"/>
-                              <Component id="fastAndCareful1" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtTituloPaciente" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="30" max="32767" attributes="0"/>
@@ -92,11 +92,11 @@
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="txtRegistrados" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtRegistrarPaciente" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="350" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="btnRegistrar" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnRegistrarPaciente" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="357" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -107,20 +107,20 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace pref="20" max="32767" attributes="0"/>
-                      <Component id="fastAndCareful1" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtTituloPaciente" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txtRegistrados" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtRegistrarPaciente" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="panelnfoPersonal" min="-2" max="-2" attributes="0"/>
                           <Component id="panelSintomas" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnRegistrar" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnRegistrarPaciente" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnMostrar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnModificar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnMostrarPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnModificarPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnEliminarPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
@@ -147,21 +147,21 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="14" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtNumeroDocumento" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtTipoDocumento" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtNombre" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtApellido" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtGenero" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtSangre" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtNumeroDocumentoPaciente" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtTipoDocumentoPaciente" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtNombrePaciente" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtApellidoPaciente" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtGeneroPaciente" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtSangrePaciente" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="boxTipoDoc" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="boxGenero" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
-                              <Component id="fieldNombre" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
-                              <Component id="fieldNumeroDocumento" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
-                              <Component id="fieldApellido" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
-                              <Component id="fieldSangre" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
+                              <Component id="boxTipoDocPaciente" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="boxGeneroPaciente" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
+                              <Component id="fieldNombrePaciente" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
+                              <Component id="fieldNumeroDocumentoPaciente" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
+                              <Component id="fieldApellidoPaciente" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
+                              <Component id="fieldSangrePaciente" alignment="0" min="-2" pref="233" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       </Group>
@@ -174,33 +174,33 @@
                           <Component id="jLabel1" min="-2" pref="42" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtTipoDocumento" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="boxTipoDoc" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                              <Component id="txtTipoDocumentoPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="boxTipoDocPaciente" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtNumeroDocumento" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="fieldNumeroDocumento" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtNumeroDocumentoPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fieldNumeroDocumentoPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="fieldNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtNombrePaciente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fieldNombrePaciente" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="fieldApellido" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtApellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fieldApellidoPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtApellidoPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtGenero" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="boxGenero" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtGeneroPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="boxGeneroPaciente" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtSangre" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="fieldSangre" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtSangrePaciente" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="fieldSangrePaciente" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="14" max="32767" attributes="0"/>
                       </Group>
@@ -208,7 +208,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="txtNumeroDocumento">
+                <Component class="javax.swing.JLabel" name="txtNumeroDocumentoPaciente">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="OCR A Extended" size="15" style="0"/>
@@ -216,17 +216,17 @@
                     <Property name="text" type="java.lang.String" value="Numero de documento"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="fieldNumeroDocumento">
+                <Component class="javax.swing.JTextField" name="fieldNumeroDocumentoPaciente">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="OCR A Extended" size="14" style="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldNumeroDocumentoActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldNumeroDocumentoPacienteActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="txtTipoDocumento">
+                <Component class="javax.swing.JLabel" name="txtTipoDocumentoPaciente">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="OCR A Extended" size="15" style="0"/>
@@ -234,7 +234,7 @@
                     <Property name="text" type="java.lang.String" value="Tipo de documento"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="boxTipoDoc">
+                <Component class="javax.swing.JComboBox" name="boxTipoDocPaciente">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="OCR A Extended" size="14" style="0"/>
@@ -252,7 +252,7 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JLabel" name="txtNombre">
+                <Component class="javax.swing.JLabel" name="txtNombrePaciente">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="OCR A Extended" size="15" style="0"/>
@@ -260,17 +260,17 @@
                     <Property name="text" type="java.lang.String" value="Primer nombre"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="fieldNombre">
+                <Component class="javax.swing.JTextField" name="fieldNombrePaciente">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="OCR A Extended" size="14" style="0"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldNombreActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldNombrePacienteActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="txtApellido">
+                <Component class="javax.swing.JLabel" name="txtApellidoPaciente">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="OCR A Extended" size="15" style="0"/>
@@ -278,14 +278,14 @@
                     <Property name="text" type="java.lang.String" value="Primer apellido"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="fieldApellido">
+                <Component class="javax.swing.JTextField" name="fieldApellidoPaciente">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="OCR A Extended" size="14" style="0"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="txtGenero">
+                <Component class="javax.swing.JLabel" name="txtGeneroPaciente">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="OCR A Extended" size="15" style="0"/>
@@ -293,7 +293,7 @@
                     <Property name="text" type="java.lang.String" value="Genero"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="boxGenero">
+                <Component class="javax.swing.JComboBox" name="boxGeneroPaciente">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="OCR A Extended" size="14" style="0"/>
@@ -310,7 +310,7 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JLabel" name="txtSangre">
+                <Component class="javax.swing.JLabel" name="txtSangrePaciente">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="OCR A Extended" size="15" style="0"/>
@@ -318,7 +318,7 @@
                     <Property name="text" type="java.lang.String" value="Tipo de sangre"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="fieldSangre">
+                <Component class="javax.swing.JTextField" name="fieldSangrePaciente">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="OCR A Extended" size="14" style="0"/>
@@ -512,7 +512,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="btnRegistrar">
+            <Component class="javax.swing.JButton" name="btnRegistrarPaciente">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="OCR A Extended" size="15" style="0"/>
@@ -520,10 +520,10 @@
                 <Property name="text" type="java.lang.String" value="Registrar Paciente"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarPacienteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btnMostrar">
+            <Component class="javax.swing.JButton" name="btnMostrarPaciente">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="OCR A Extended" size="15" style="0"/>
@@ -532,7 +532,7 @@
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarPacienteActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnEliminarPaciente">
@@ -546,7 +546,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarPacienteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btnModificar">
+            <Component class="javax.swing.JButton" name="btnModificarPaciente">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="OCR A Extended" size="15" style="0"/>
@@ -554,10 +554,10 @@
                 <Property name="text" type="java.lang.String" value="Modificar Paciente"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModificarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModificarPacienteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="fastAndCareful1">
+            <Component class="javax.swing.JLabel" name="txtTituloPaciente">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="OCR A Extended" size="28" style="1"/>
@@ -565,7 +565,7 @@
                 <Property name="text" type="java.lang.String" value="PACIENTE"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="txtRegistrados">
+            <Component class="javax.swing.JLabel" name="txtRegistrarPaciente">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="OCR A Extended" size="18" style="0"/>
@@ -644,6 +644,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Administrar Camas"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

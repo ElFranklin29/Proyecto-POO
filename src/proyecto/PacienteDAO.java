@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 public class PacienteDAO {
 
     private Hashtable<Integer, PacienteVO> infoPaciente;
+    Camas camas;
     
 
     public PacienteDAO(Hashtable<Integer, PacienteVO> infoPaciente) {
@@ -53,7 +54,7 @@ public class PacienteDAO {
    
     }
     
-    public void actualizarPaciente(int codigo, PacienteDAO pacienteDAO){
+    public void actualizarPaciente(int codigo, PacienteDAO pacienteDAO, Camas camas){
         
          if (getInfoPaciente().containsKey(codigo) == true) {
             ActualizarPaciente ventana= new ActualizarPaciente(getInfoPaciente(), codigo, pacienteDAO);
@@ -63,6 +64,8 @@ public class PacienteDAO {
             JOptionPane.showMessageDialog(null, "El documento no esta registrado",
                     "Advertencia", JOptionPane.ERROR_MESSAGE);
         }
+         
+         this.camas=camas;
         
        
 
@@ -72,6 +75,15 @@ public class PacienteDAO {
     public void modificarPaciente(PacienteVO pacienteVO) {
         Diagnostico diagnostico= new Diagnostico();
         diagnostico.dianosticarPaciente(pacienteVO);
+        
+        if (pacienteVO.getTriage().equals("Triage 3")) {
+            camas.asignarCama(pacienteVO, camas);
+            JOptionPane.showMessageDialog(null, "Su nivel de Triage cambio a nivel 3, por lo tanto se le asignara una cama",
+                    "Asignar Cama", JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            camas.getInfoCamas().remove(pacienteVO.getNumeroID());
+        }
+        
         getInfoPaciente().replace(pacienteVO.getNumeroID(), pacienteVO);
     }
 

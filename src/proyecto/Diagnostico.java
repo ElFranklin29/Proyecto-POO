@@ -1,5 +1,8 @@
 package proyecto;
 
+import Presentacion.MenuPrincipal;
+import javax.swing.JOptionPane;
+
 
 
 public class Diagnostico extends PacienteDAO {
@@ -7,6 +10,8 @@ public class Diagnostico extends PacienteDAO {
     private String enfermedad;
     private String triage;
     private boolean cama;
+    PacienteVO pacienteVO;
+    Camas camas;
    
 
     public Diagnostico(String enfermedad, String triage, boolean cama) {
@@ -163,8 +168,23 @@ public class Diagnostico extends PacienteDAO {
             pacienteVO.setEnfermedad(enfermedad);
         }
         
-
-
+        
+        this.pacienteVO=pacienteVO;
+ 
+        
+       
+    }
+    
+    
+    public void asignarCama(Camas camas){
+        if (triage.equals("Triage 3")) {
+            camas.asignarCama(pacienteVO, camas);
+            JOptionPane.showMessageDialog(null, "Su nivel de Triage es nivel 3, por lo tanto se le asignara una cama",
+                    "Asignar Cama", JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+    
+    
     }
     
       
