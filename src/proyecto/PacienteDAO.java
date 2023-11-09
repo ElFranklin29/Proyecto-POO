@@ -1,6 +1,7 @@
 package proyecto;
 
 import Presentacion.ActualizarPaciente;
+import Presentacion.RecetarMedicamentos;
 import java.util.Hashtable;
 import javax.swing.JOptionPane;
 
@@ -66,10 +67,6 @@ public class PacienteDAO {
         }
          
          this.camas=camas;
-        
-       
-
-
     }
 
     public void modificarPaciente(PacienteVO pacienteVO) {
@@ -86,6 +83,20 @@ public class PacienteDAO {
         
         getInfoPaciente().replace(pacienteVO.getNumeroID(), pacienteVO);
     }
+    
+    public void diagnosticarMedicamentos(int codigo, PacienteDAO pacienteDAO){
+        
+        if (getInfoPaciente().containsKey(codigo) == true) {
+           RecetarMedicamentos ventana = new RecetarMedicamentos(getInfoPaciente(), codigo, pacienteDAO);
+           ventana.setVisible(true);
+        } else {
+
+            JOptionPane.showMessageDialog(null, "El documento no esta registrado",
+                    "Advertencia", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    
 
    
 

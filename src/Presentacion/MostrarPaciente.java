@@ -46,17 +46,17 @@ public class MostrarPaciente extends javax.swing.JFrame {
         tablaPacientes.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
         tablaPacientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Tipo Documento", "Numero Documento", "Nombre", "Apellido", "Genero", "Tipo De Sangre ", "Sintoma 1", "Sintoma 2", "Sintoma 3", "Enfermedad", "Triage"
+                "Tipo Documento", "Numero Documento", "Nombre", "Apellido", "Genero", "Tipo De Sangre ", "Sintoma 1", "Sintoma 2", "Sintoma 3", "Enfermedad", "Triage", "Medicamento 1", "Medicamento 2", "Medicamento 3"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -64,6 +64,23 @@ public class MostrarPaciente extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(tablaPacientes);
+        if (tablaPacientes.getColumnModel().getColumnCount() > 0) {
+            tablaPacientes.getColumnModel().getColumn(0).setResizable(false);
+            tablaPacientes.getColumnModel().getColumn(0).setPreferredWidth(160);
+            tablaPacientes.getColumnModel().getColumn(1).setResizable(false);
+            tablaPacientes.getColumnModel().getColumn(2).setResizable(false);
+            tablaPacientes.getColumnModel().getColumn(3).setResizable(false);
+            tablaPacientes.getColumnModel().getColumn(4).setResizable(false);
+            tablaPacientes.getColumnModel().getColumn(5).setResizable(false);
+            tablaPacientes.getColumnModel().getColumn(6).setResizable(false);
+            tablaPacientes.getColumnModel().getColumn(7).setResizable(false);
+            tablaPacientes.getColumnModel().getColumn(8).setResizable(false);
+            tablaPacientes.getColumnModel().getColumn(9).setResizable(false);
+            tablaPacientes.getColumnModel().getColumn(10).setResizable(false);
+            tablaPacientes.getColumnModel().getColumn(11).setResizable(false);
+            tablaPacientes.getColumnModel().getColumn(12).setResizable(false);
+            tablaPacientes.getColumnModel().getColumn(13).setResizable(false);
+        }
 
         btnCerrarventana.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
         btnCerrarventana.setText("Cerrar Ventana");
@@ -106,9 +123,14 @@ public class MostrarPaciente extends javax.swing.JFrame {
     public void llenarTabla(Hashtable<Integer, PacienteVO> infoPaciente) {
         
         DefaultTableModel mt = new DefaultTableModel(new String[]{"Tipo Documento", "Numero Documento", "Nombre","Apellido","Genero",
-            "Tipo De Sangre","Sintoma 1", "Sintoma 2", "Sintoma 3","Enfermedad", "Triage"}, infoPaciente.size());
+            "Tipo De Sangre","Sintoma 1", "Sintoma 2", "Sintoma 3","Enfermedad", "Triage","Medicamento 1", "Medicamento 2",
+        "Medicamento 3"}, infoPaciente.size());
 
+        
+        
         tablaPacientes.setModel(mt);
+        
+        
         
          Enumeration <PacienteVO> Pacientes = infoPaciente.elements();
         
@@ -126,6 +148,9 @@ public class MostrarPaciente extends javax.swing.JFrame {
             modeloDatos.setValueAt(e.getSintomaGeneral(), i, 8);
             modeloDatos.setValueAt(e.getEnfermedad(), i, 9);
             modeloDatos.setValueAt(e.getTriage(), i, 10);
+            modeloDatos.setValueAt(e.getMedicamento1(), i, 11);
+            modeloDatos.setValueAt(e.getMedicamento2(), i, 12);
+            modeloDatos.setValueAt(e.getMedicamento3(), i, 13);
             
         }
         

@@ -29,6 +29,7 @@ public class ActualizarPaciente extends javax.swing.JFrame {
         boxGenerales.setSelectedItem(pacienteVO.getSintomaGeneral());
         
         
+        
     }
 
     @SuppressWarnings("unchecked")
