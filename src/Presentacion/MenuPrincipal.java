@@ -8,16 +8,20 @@ import proyecto.Camas;
 import proyecto.Diagnostico;
 import proyecto.PacienteDAO;
 import proyecto.PacienteVO;
+import proyecto.archivoTexto;
 
 public class MenuPrincipal extends javax.swing.JFrame {
 
     PacienteDAO pacienteDAO = new PacienteDAO();
     Camas camas=new Camas();
+    archivoTexto archivo= new archivoTexto();
+    
 
     
     public MenuPrincipal() {
         initComponents();
         super.setLocationRelativeTo(null);
+        archivo.crearArchivoDeTexto();
     }
     
    
@@ -575,10 +579,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pacienteVO.setSintomaGeneral((String) boxGenerales.getSelectedItem());
 
         pacienteDAO.registrarPaciente(pacienteVO);
-
+        
         Diagnostico diagnostico = new Diagnostico();
         diagnostico.dianosticarPaciente(pacienteVO);
         diagnostico.asignarCama(camas);
+        archivo.escribirArchivo(pacienteDAO);
         
 
     }
