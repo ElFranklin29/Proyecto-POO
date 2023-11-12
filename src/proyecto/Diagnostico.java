@@ -48,7 +48,7 @@ public class Diagnostico extends PacienteDAO {
         if (pacienteVO.getSintomaRespiratorio().equals("Presion arterial") && pacienteVO.getSintomaDigestivo().equals("Vomito")
                 && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
             triage = "Triage 2";
-            enfermedad = " Gastroenteritis viral";
+            enfermedad = "Gastroenteritis viral";
             pacienteVO.setTriage(triage);
             pacienteVO.setEnfermedad(enfermedad);
 
