@@ -13,6 +13,8 @@ public class ActualizarEnfermero extends javax.swing.JFrame {
 
     public ActualizarEnfermero(Hashtable<Integer, EnfermeroVO> infoEnfermero, int codigo, EnfermeroDAO enfermeroDAO) {
         initComponents();
+        
+        this.enfermeroDAO=enfermeroDAO;
         enfermeroVO = infoEnfermero.get(codigo);
         boxTipoDoc.setSelectedItem(enfermeroVO.getTipoID());
         fieldNombre.setText(enfermeroVO.getNombre());

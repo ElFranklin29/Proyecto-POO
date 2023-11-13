@@ -44,7 +44,7 @@ public class archivoTexto {
             FileWriter escritura = new FileWriter(archivo, true);
             
             
-            escritura.write(pacienteDAO.getInfoPaciente().toString());
+            escritura.write(pacienteDAO.toString());
             
             /*
             escritura.write(pacienteVO.getTipoID()+" "+pacienteVO.getNumeroID()+" "+ pacienteVO.getNombre()+" "+

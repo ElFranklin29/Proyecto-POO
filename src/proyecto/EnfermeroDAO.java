@@ -25,7 +25,7 @@ public class EnfermeroDAO {
         this.infoEnfermero = infoEnfermero;
     }
 
-    public void registrarMedico(EnfermeroVO enfermeroVO) {
+    public void registrarEnfermero(EnfermeroVO enfermeroVO) {
         if (getInfoEnfermero().containsKey(enfermeroVO.getNumeroID()) == false) {
             infoEnfermero.put(enfermeroVO.getNumeroID(), enfermeroVO);
             setInfoEnfermero(infoEnfermero);
@@ -64,4 +64,6 @@ public class EnfermeroDAO {
     public void modificarEnfermero(EnfermeroVO enfermeroVO) {
         getInfoEnfermero().replace(enfermeroVO.getNumeroID(), enfermeroVO);
     }
+    
+    
 }

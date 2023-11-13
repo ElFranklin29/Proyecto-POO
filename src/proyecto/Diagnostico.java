@@ -3,8 +3,6 @@ package proyecto;
 import Presentacion.MenuPrincipal;
 import javax.swing.JOptionPane;
 
-
-
 public class Diagnostico extends PacienteDAO {
 
     private String enfermedad;
@@ -12,21 +10,18 @@ public class Diagnostico extends PacienteDAO {
     private boolean cama;
     PacienteVO pacienteVO;
     Camas camas;
-   
 
     public Diagnostico(String enfermedad, String triage, boolean cama) {
         this.enfermedad = enfermedad;
         this.triage = triage;
         this.cama = cama;
     }
-    
+
     public Diagnostico() {
         this.enfermedad = "";
         this.triage = "";
         this.cama = false;
     }
-
-     
 
     public String getEnfermedad() {
         return enfermedad;
@@ -82,6 +77,14 @@ public class Diagnostico extends PacienteDAO {
 
         if (pacienteVO.getSintomaRespiratorio().equals("Presion arterial") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
                 && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
+            triage = "Triage 3";
+            enfermedad = "Infeccion gastrointestinal";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+        
+        if (pacienteVO.getSintomaRespiratorio().equals("Presion arterial") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
+                && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
             triage = "Triage 3";
             enfermedad = "Infeccion gastrointestinal";
             pacienteVO.setTriage(triage);
@@ -167,27 +170,151 @@ public class Diagnostico extends PacienteDAO {
             pacienteVO.setTriage(triage);
             pacienteVO.setEnfermedad(enfermedad);
         }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Vomito")
+                && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
+            triage = "Triage 2";
+            enfermedad = "Infeccion sistematica";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Vomito")
+                && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
+            triage = "Triage 1";
+            enfermedad = "Migraña";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Vomito")
+                && pacienteVO.getSintomaGeneral().equals("Cansancio")) {
+            triage = "Triage 2";
+            enfermedad = "Enfermedad viral";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Vomito")
+                && pacienteVO.getSintomaGeneral().equals("Ninguno")) {
+            triage = "Triage 1";
+            enfermedad = "problemas gastro intestinales";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
         
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
+                && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
+            triage = "Triage 2";
+            enfermedad = "Enfermedad inflamatoria";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
         
-        this.pacienteVO=pacienteVO;
- 
-        
-       
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
+                && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
+            triage = "Triage 1";
+            enfermedad = "Migraña";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
+                && pacienteVO.getSintomaGeneral().equals("Cansancio")) {
+            triage = "Triage 2";
+            enfermedad = "Problemas gastrointestinales";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
+                && pacienteVO.getSintomaGeneral().equals("Ninguno")) {
+            triage = "Triage 3";
+            enfermedad = "Sindrome de instestino irritable";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+               
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Ruidos intestinales")
+                && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
+            triage = "Triage 3";
+            enfermedad = "Enfermedad inflamatoria";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Ruidos intestinales")
+                && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
+            triage = "Triage 1";
+            enfermedad = "Migraña";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Ruidos intestinales")
+                && pacienteVO.getSintomaGeneral().equals("Cansancio")) {
+            triage = "Triage 2";
+            enfermedad = "Problemas gastrointestinales";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Ruidos intestinales")
+                && pacienteVO.getSintomaGeneral().equals("Ninguno")) {
+            triage = "Triage 3";
+            enfermedad = "Sindrome de intestino irritable";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+            
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Ninguno")
+                && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
+            triage = "Triage 2";
+            enfermedad = "Infeccion sistemica";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Ninguno")
+                && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
+            triage = "Triage 1";
+            enfermedad = "Migraña";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Ninguno")
+                && pacienteVO.getSintomaGeneral().equals("Cansancio")) {
+            triage = "Triage 3";
+            enfermedad = "Problemas cardiacos";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Ninguno")
+                && pacienteVO.getSintomaGeneral().equals("Ninguno")) {
+            triage = "Triage 3";
+            enfermedad = "Problemas cardiacos";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+
+        this.pacienteVO = pacienteVO;
+
     }
-    
-    
-    public void asignarCama(Camas camas){
+
+    public void asignarCama(Camas camas) {
         if (triage.equals("Triage 3")) {
             camas.asignarCama(pacienteVO, camas);
             JOptionPane.showMessageDialog(null, "Su nivel de Triage es nivel 3, por lo tanto se le asignara una cama",
                     "Asignar Cama", JOptionPane.INFORMATION_MESSAGE);
-            
+
         }
-    
-    
+
     }
-    
-      
-    
 
 }

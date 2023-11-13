@@ -1,6 +1,5 @@
 package proyecto;
 
-
 import javax.swing.JOptionPane;
 
 public class Persona {
@@ -10,7 +9,6 @@ public class Persona {
     private String tipoID;
     private int numeroID;
     private String genero;
-    
 
     public Persona(String nombre, String apellido, String tipoID, int numeroID, String genero) {
         this.nombre = nombre;
@@ -20,20 +18,14 @@ public class Persona {
         this.genero = genero;
     }
 
-    
- 
-
     public Persona() {
         this.nombre = " ";
         this.apellido = "";
         this.tipoID = " ";
         this.numeroID = 0;
         this.genero = " ";
-   
-    }
-    
-   
 
+    }
 
     public String getNombre() {
         return nombre;
@@ -105,9 +97,5 @@ public class Persona {
         }
 
     }
-
-   
-    
- 
 
 }

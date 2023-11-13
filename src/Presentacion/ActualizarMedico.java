@@ -15,7 +15,6 @@ public class ActualizarMedico extends javax.swing.JFrame {
         initComponents();
         super.setLocationRelativeTo(null);
         this.medicoDAO = medicoDAO;
-
         medicoVO = infoMedico.get(codigo);
         boxTipoDoc.setSelectedItem(medicoVO.getTipoID());
         fieldNombre.setText(medicoVO.getNombre());

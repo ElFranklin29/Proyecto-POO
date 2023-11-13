@@ -35,6 +35,8 @@ public class RecetarMedicamentos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
         panelnfoPersonal = new javax.swing.JPanel();
         txtMedicamento1 = new javax.swing.JLabel();
         fieldMedicamento1 = new javax.swing.JTextField();
@@ -50,6 +52,10 @@ public class RecetarMedicamentos extends javax.swing.JFrame {
         txtMedicamento6 = new javax.swing.JLabel();
         txtMedicamento7 = new javax.swing.JLabel();
         txtMedicamento8 = new javax.swing.JLabel();
+        txtMedicamento9 = new javax.swing.JLabel();
+        fieldCantidadMedicamentos2 = new javax.swing.JTextField();
+        fieldCantidadMedicamentos1 = new javax.swing.JTextField();
+        fieldCantidadMedicamentos3 = new javax.swing.JTextField();
         btnRegistrarMedicamentos = new javax.swing.JButton();
         txtRecetar = new javax.swing.JLabel();
         txtNombre = new javax.swing.JLabel();
@@ -63,6 +69,13 @@ public class RecetarMedicamentos extends javax.swing.JFrame {
         labelGenero = new javax.swing.JLabel();
         labelSangre = new javax.swing.JLabel();
         labelEnfermedad = new javax.swing.JLabel();
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -95,7 +108,7 @@ public class RecetarMedicamentos extends javax.swing.JFrame {
         fieldPrecioMedicamento1.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
 
         txtMedicamento4.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
-        txtMedicamento4.setText("Digite precio");
+        txtMedicamento4.setText("Cantidad");
 
         txtMedicamento5.setFont(new java.awt.Font("OCR A Extended", 0, 12)); // NOI18N
         txtMedicamento5.setText("(Separar cifras con punto)");
@@ -109,72 +122,103 @@ public class RecetarMedicamentos extends javax.swing.JFrame {
         txtMedicamento8.setFont(new java.awt.Font("OCR A Extended", 0, 18)); // NOI18N
         txtMedicamento8.setText("$");
 
+        txtMedicamento9.setFont(new java.awt.Font("OCR A Extended", 0, 15)); // NOI18N
+        txtMedicamento9.setText("Digite precio");
+
+        fieldCantidadMedicamentos2.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+
+        fieldCantidadMedicamentos1.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+
+        fieldCantidadMedicamentos3.setFont(new java.awt.Font("OCR A Extended", 0, 14)); // NOI18N
+
         javax.swing.GroupLayout panelnfoPersonalLayout = new javax.swing.GroupLayout(panelnfoPersonal);
         panelnfoPersonal.setLayout(panelnfoPersonalLayout);
         panelnfoPersonalLayout.setHorizontalGroup(
             panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelnfoPersonalLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(txtMedicamento4)
-                .addGap(62, 62, 62))
             .addGroup(panelnfoPersonalLayout.createSequentialGroup()
-                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtMedicamento5)
+                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(panelnfoPersonalLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtMedicamento1)
+                        .addGap(18, 18, 18)
+                        .addComponent(fieldMedicamento1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelnfoPersonalLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
                         .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(panelnfoPersonalLayout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(txtMedicamento1)
+                                .addComponent(txtMedicamento2)
                                 .addGap(18, 18, 18)
-                                .addComponent(fieldMedicamento1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(fieldMedicamento2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelnfoPersonalLayout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(panelnfoPersonalLayout.createSequentialGroup()
-                                        .addComponent(txtMedicamento2)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(fieldMedicamento2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(panelnfoPersonalLayout.createSequentialGroup()
-                                        .addComponent(txtMedicamento3)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(fieldMedicamento3)))))
-                        .addGap(27, 27, 27)
+                                .addComponent(txtMedicamento3)
+                                .addGap(18, 18, 18)
+                                .addComponent(fieldMedicamento3)))))
+                .addGap(27, 27, 27)
+                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelnfoPersonalLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(txtMedicamento9)
+                        .addGap(117, 117, 117))
+                    .addGroup(panelnfoPersonalLayout.createSequentialGroup()
+                        .addComponent(txtMedicamento5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtMedicamento4)
+                        .addContainerGap(12, Short.MAX_VALUE))
+                    .addGroup(panelnfoPersonalLayout.createSequentialGroup()
                         .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtMedicamento6)
                             .addComponent(txtMedicamento7)
                             .addComponent(txtMedicamento8))
                         .addGap(18, 18, 18)
                         .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fieldPrecioMedicamento1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(fieldPrecioMedicamento2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fieldPrecioMedicamento3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(32, Short.MAX_VALUE))
+                            .addComponent(fieldPrecioMedicamento3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fieldPrecioMedicamento1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelnfoPersonalLayout.createSequentialGroup()
+                                .addComponent(fieldCantidadMedicamentos1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26))
+                            .addGroup(panelnfoPersonalLayout.createSequentialGroup()
+                                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(fieldCantidadMedicamentos2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(fieldCantidadMedicamentos3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap())))))
         );
         panelnfoPersonalLayout.setVerticalGroup(
             panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelnfoPersonalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtMedicamento4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(txtMedicamento5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtMedicamento9, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelnfoPersonalLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(txtMedicamento4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelnfoPersonalLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMedicamento5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fieldMedicamento1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMedicamento1)
-                    .addComponent(fieldPrecioMedicamento1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMedicamento6))
+                .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(fieldMedicamento1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtMedicamento1)
+                        .addComponent(txtMedicamento6)
+                        .addComponent(fieldCantidadMedicamentos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(fieldPrecioMedicamento1, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(fieldMedicamento2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtMedicamento2)
-                    .addComponent(fieldPrecioMedicamento2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMedicamento7))
+                    .addComponent(txtMedicamento7)
+                    .addComponent(fieldCantidadMedicamentos2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldPrecioMedicamento2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panelnfoPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(fieldMedicamento3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtMedicamento3)
-                    .addComponent(fieldPrecioMedicamento3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMedicamento8))
+                    .addComponent(fieldPrecioMedicamento3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMedicamento8)
+                    .addComponent(fieldCantidadMedicamentos3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
@@ -221,46 +265,46 @@ public class RecetarMedicamentos extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(125, 125, 125)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtSangre)
-                    .addComponent(txtApellido)
-                    .addComponent(txtNombre)
-                    .addComponent(txtEnfermedad)
-                    .addComponent(txtGenero))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelApellido)
-                    .addComponent(labelGenero)
-                    .addComponent(labelSangre)
-                    .addComponent(labelEnfermedad))
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(41, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(panelnfoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(17, 17, 17))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(txtRecetar)
-                        .addGap(141, 141, 141))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(txtInformacionPaciente)
-                        .addGap(184, 184, 184))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnRegistrarMedicamentos)
-                        .addGap(259, 259, 259))))
+                        .addGap(298, 298, 298))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(txtRecetar)
+                        .addGap(198, 198, 198))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(125, 125, 125)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtInformacionPaciente)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtSangre)
+                            .addComponent(txtApellido)
+                            .addComponent(txtNombre)
+                            .addComponent(txtEnfermedad)
+                            .addComponent(txtGenero))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelApellido)
+                            .addComponent(labelGenero)
+                            .addComponent(labelSangre)
+                            .addComponent(labelEnfermedad))))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(18, 18, 18)
                 .addComponent(txtRecetar, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtInformacionPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNombre)
                     .addComponent(labelNombre))
@@ -284,7 +328,7 @@ public class RecetarMedicamentos extends javax.swing.JFrame {
                 .addComponent(panelnfoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRegistrarMedicamentos)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         pack();
@@ -305,12 +349,17 @@ public class RecetarMedicamentos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegistrarMedicamentos;
+    private javax.swing.JTextField fieldCantidadMedicamentos1;
+    private javax.swing.JTextField fieldCantidadMedicamentos2;
+    private javax.swing.JTextField fieldCantidadMedicamentos3;
     private javax.swing.JTextField fieldMedicamento1;
     private javax.swing.JTextField fieldMedicamento2;
     private javax.swing.JTextField fieldMedicamento3;
     private javax.swing.JTextField fieldPrecioMedicamento1;
     private javax.swing.JTextField fieldPrecioMedicamento2;
     private javax.swing.JTextField fieldPrecioMedicamento3;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labelApellido;
     private javax.swing.JLabel labelEnfermedad;
     private javax.swing.JLabel labelGenero;
@@ -329,6 +378,7 @@ public class RecetarMedicamentos extends javax.swing.JFrame {
     private javax.swing.JLabel txtMedicamento6;
     private javax.swing.JLabel txtMedicamento7;
     private javax.swing.JLabel txtMedicamento8;
+    private javax.swing.JLabel txtMedicamento9;
     private javax.swing.JLabel txtNombre;
     private javax.swing.JLabel txtRecetar;
     private javax.swing.JLabel txtSangre;
@@ -340,9 +390,13 @@ public class RecetarMedicamentos extends javax.swing.JFrame {
        pacienteVO.setMedicamento3(fieldMedicamento3.getText());
        
        
-       pacienteVO.setPrecioMedicamento1(Double.parseDouble(fieldPrecioMedicamento1.getText()));
-       pacienteVO.setPrecioMedicamento2(Double.parseDouble(fieldPrecioMedicamento2.getText()));
-       pacienteVO.setPrecioMedicamento3(Double.parseDouble(fieldPrecioMedicamento3.getText()));
+       pacienteVO.setPrecioMedicamento1(Integer.parseInt(fieldPrecioMedicamento1.getText()));
+       pacienteVO.setPrecioMedicamento2(Integer.parseInt(fieldPrecioMedicamento2.getText()));
+       pacienteVO.setPrecioMedicamento3(Integer.parseInt(fieldPrecioMedicamento3.getText()));
+       
+       pacienteVO.setCantidadMedicamento1(Integer.parseInt(fieldCantidadMedicamentos1.getText()));
+       pacienteVO.setCantidadMedicamento2(Integer.parseInt(fieldCantidadMedicamentos2.getText()));
+       pacienteVO.setCantidadMedicamento3(Integer.parseInt(fieldCantidadMedicamentos3.getText()));
         
         
     

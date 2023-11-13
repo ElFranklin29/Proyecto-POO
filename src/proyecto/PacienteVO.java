@@ -1,8 +1,7 @@
-
 package proyecto;
 
+public class PacienteVO extends Persona {
 
-public class PacienteVO extends Persona{
     private String tipoSangre;
     private String sintomaRespiratorio;
     private String sintomaDigestivo;
@@ -12,11 +11,14 @@ public class PacienteVO extends Persona{
     private String medicamento1;
     private String medicamento2;
     private String medicamento3;
-    private double precioMedicamento1;
-     private double precioMedicamento2;
-     private double precioMedicamento3;
+    private int precioMedicamento1;
+    private int precioMedicamento2;
+    private int precioMedicamento3;
+    private int cantidadMedicamento1;
+    private int cantidadMedicamento2;
+    private int cantidadMedicamento3;
 
-    public PacienteVO(String tipoSangre, String sintomaRespiratorio, String sintomaDigestivo, String sintomaGeneral, String triage, String enfermedad, String medicamento1, String medicamento2, String medicamento3, double precioMedicamento1, double precioMedicamento2, double precioMedicamento3, String nombre, String apellido, String tipoID, int numeroID, String genero) {
+    public PacienteVO(String tipoSangre, String sintomaRespiratorio, String sintomaDigestivo, String sintomaGeneral, String triage, String enfermedad, String medicamento1, String medicamento2, String medicamento3, int precioMedicamento1, int precioMedicamento2, int precioMedicamento3, int cantidadMedicamento1, int cantidadMedicamento2, int cantidadMedicamento3, String nombre, String apellido, String tipoID, int numeroID, String genero) {
         super(nombre, apellido, tipoID, numeroID, genero);
         this.tipoSangre = tipoSangre;
         this.sintomaRespiratorio = sintomaRespiratorio;
@@ -30,14 +32,14 @@ public class PacienteVO extends Persona{
         this.precioMedicamento1 = precioMedicamento1;
         this.precioMedicamento2 = precioMedicamento2;
         this.precioMedicamento3 = precioMedicamento3;
+        this.cantidadMedicamento1 = cantidadMedicamento1;
+        this.cantidadMedicamento2 = cantidadMedicamento2;
+        this.cantidadMedicamento3 = cantidadMedicamento3;
     }
-
     
-   
-    
-     public PacienteVO(){
+    public PacienteVO() {
         
-         this.tipoSangre = "";
+        this.tipoSangre = "";
         this.sintomaRespiratorio = "";
         this.sintomaDigestivo = "";
         this.sintomaGeneral = "";
@@ -46,34 +48,65 @@ public class PacienteVO extends Persona{
         this.medicamento1 = "No se ha asignado medicamento";
         this.medicamento2 = "No se ha asignado medicamento";
         this.medicamento3 = "No se ha asignado medicamento";
+        this.cantidadMedicamento1=0;
+        this.cantidadMedicamento2=0;
+        this.cantidadMedicamento3=0;
+        this.precioMedicamento1=0;
+        this.precioMedicamento2=0;
+        this.precioMedicamento3=0;
     }
-     
-     public double getPrecioMedicamento1() {
+
+    public int getCantidadMedicamento1() {
+        return cantidadMedicamento1;
+    }
+
+    public void setCantidadMedicamento1(int cantidadMedicamento1) {
+        this.cantidadMedicamento1 = cantidadMedicamento1;
+    }
+
+    public int getCantidadMedicamento2() {
+        return cantidadMedicamento2;
+    }
+
+    public void setCantidadMedicamento2(int cantidadMedicamento2) {
+        this.cantidadMedicamento2 = cantidadMedicamento2;
+    }
+
+    public int getCantidadMedicamento3() {
+        return cantidadMedicamento3;
+    }
+
+    public void setCantidadMedicamento3(int cantidadMedicamento3) {
+        this.cantidadMedicamento3 = cantidadMedicamento3;
+    }
+
+    
+
+    public int getPrecioMedicamento1() {
         return precioMedicamento1;
     }
 
-    public void setPrecioMedicamento1(double precioMedicamento1) {
+    public void setPrecioMedicamento1(int precioMedicamento1) {
         this.precioMedicamento1 = precioMedicamento1;
     }
 
-    public double getPrecioMedicamento2() {
+    public int getPrecioMedicamento2() {
         return precioMedicamento2;
     }
 
-    public void setPrecioMedicamento2(double precioMedicamento2) {
+    public void setPrecioMedicamento2(int precioMedicamento2) {
         this.precioMedicamento2 = precioMedicamento2;
     }
 
-    public double getPrecioMedicamento3() {
+    public int getPrecioMedicamento3() {
         return precioMedicamento3;
     }
 
-    public void setPrecioMedicamento3(double precioMedicamento3) {
+    public void setPrecioMedicamento3(int precioMedicamento3) {
         this.precioMedicamento3 = precioMedicamento3;
     }
 
-     
-     public String getMedicamento1() {
+    public String getMedicamento1() {
         return medicamento1;
     }
 
@@ -96,7 +129,7 @@ public class PacienteVO extends Persona{
     public void setMedicamento3(String medicamento3) {
         this.medicamento3 = medicamento3;
     }
-  
+
     public String getTriage() {
         return triage;
     }
@@ -145,6 +178,4 @@ public class PacienteVO extends Persona{
         this.tipoSangre = tipoSangre;
     }
 
-    
-       
 }
