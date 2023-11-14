@@ -1,8 +1,8 @@
 package proyecto;
 
-import proyecto.Persona;
+import proyecto.PersonaVO;
 
-public class EnfermeroVO extends Persona{
+public class EnfermeroVO extends PersonaVO{
     private String lugarEstudio;
     private String medicina;
 

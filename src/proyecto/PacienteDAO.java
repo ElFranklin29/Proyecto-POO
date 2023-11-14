@@ -5,7 +5,7 @@ import Presentacion.RecetarMedicamentos;
 import java.util.Hashtable;
 import javax.swing.JOptionPane;
 
-public class PacienteDAO {
+public class PacienteDAO{
     Factura f= new Factura();
     private Hashtable<Integer, PacienteVO> infoPaciente;
     Camas camas;
@@ -109,5 +109,6 @@ public class PacienteDAO {
         }
 
     }
+
 
 }

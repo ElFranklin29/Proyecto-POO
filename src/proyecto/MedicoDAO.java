@@ -50,15 +50,15 @@ public class MedicoDAO {
     }
 
     public void actualizarMedico(int codigo, MedicoDAO medicoDAO) {
-
-        if (getInfoMedico().containsKey(codigo) == true) {
-            ActualizarMedico ventana = new ActualizarMedico(getInfoMedico(), codigo, medicoDAO);
+         if (getInfoMedico().containsKey(codigo) == true) {
+             ActualizarMedico ventana = new ActualizarMedico(getInfoMedico(), codigo, medicoDAO);
             ventana.setVisible(true);
         } else {
 
             JOptionPane.showMessageDialog(null, "El documento no esta registrado",
                     "Advertencia", JOptionPane.ERROR_MESSAGE);
         }
+       
     }
 
     public void modificarMedico(MedicoVO medicoVO) {

@@ -1,6 +1,6 @@
 package proyecto;
 
-public class PacienteVO extends Persona {
+public class PacienteVO extends PersonaVO {
 
     private String tipoSangre;
     private String sintomaRespiratorio;
