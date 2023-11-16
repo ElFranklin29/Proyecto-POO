@@ -969,6 +969,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void btnMostrarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarPacienteActionPerformed
         MostrarPaciente mostrar = new MostrarPaciente(pacienteDAO.getInfoPaciente(), pacienteDAO);
         mostrar.setVisible(true);
+        
+        
     }//GEN-LAST:event_btnMostrarPacienteActionPerformed
 
     private void btnEliminarPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarPacienteActionPerformed
@@ -996,6 +998,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void btnRegistrarMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarMedicoActionPerformed
         registrarMedico();
+        
+        fieldNumeroDocumentoMedico.setText("");
+        fieldNombreMedico.setText("");
+        fieldApellidoMedico.setText("");
+        boxTipoDocMedico.setSelectedIndex(0);
+        boxGeneroMedico.setSelectedIndex(0);
+        fieldLugarEstudio.setText("");
+        
+        
     }//GEN-LAST:event_btnRegistrarMedicoActionPerformed
 
     private void btnEliminarMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarMedicoActionPerformed

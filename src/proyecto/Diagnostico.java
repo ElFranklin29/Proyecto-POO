@@ -82,7 +82,7 @@ public class Diagnostico extends PacienteDAO {
             pacienteVO.setTriage(triage);
             pacienteVO.setEnfermedad(enfermedad);
         }
-        
+
         if (pacienteVO.getSintomaRespiratorio().equals("Presion arterial") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
                 && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
             triage = "Triage 3";
@@ -205,7 +205,7 @@ public class Diagnostico extends PacienteDAO {
             pacienteVO.setTriage(triage);
             pacienteVO.setEnfermedad(enfermedad);
         }
-        
+
         if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
                 && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
             triage = "Triage 2";
@@ -213,7 +213,7 @@ public class Diagnostico extends PacienteDAO {
             pacienteVO.setTriage(triage);
             pacienteVO.setEnfermedad(enfermedad);
         }
-        
+
         if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
                 && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
             triage = "Triage 1";
@@ -237,7 +237,7 @@ public class Diagnostico extends PacienteDAO {
             pacienteVO.setTriage(triage);
             pacienteVO.setEnfermedad(enfermedad);
         }
-               
+
         if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Ruidos intestinales")
                 && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
             triage = "Triage 3";
@@ -269,7 +269,7 @@ public class Diagnostico extends PacienteDAO {
             pacienteVO.setTriage(triage);
             pacienteVO.setEnfermedad(enfermedad);
         }
-            
+
         if (pacienteVO.getSintomaRespiratorio().equals("Taquicardia") && pacienteVO.getSintomaDigestivo().equals("Ninguno")
                 && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
             triage = "Triage 2";
@@ -302,6 +302,267 @@ public class Diagnostico extends PacienteDAO {
             pacienteVO.setEnfermedad(enfermedad);
         }
 
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Vomito")
+                && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
+            triage = "Triage 1";
+            enfermedad = "Gripa";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Vomito")
+                && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
+            triage = "Triage 2";
+            enfermedad = "Sinusitis";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Vomito")
+                && pacienteVO.getSintomaGeneral().equals("Cansancio")) {
+            triage = "Triage 1";
+            enfermedad = "Gripa";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Vomito")
+                && pacienteVO.getSintomaGeneral().equals("Ninguno")) {
+            triage = "Triage 3";
+            enfermedad = "Infeccion gastrointestinal";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
+                && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
+            triage = "Triage 3";
+            enfermedad = "Infeccion respiratoria";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
+                && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
+            triage = "Triage 1";
+            enfermedad = "Migraña";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
+                && pacienteVO.getSintomaGeneral().equals("Cansancio")) {
+            triage = "Triage 3";
+            enfermedad = "Infeccion respiratoria";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
+                && pacienteVO.getSintomaGeneral().equals("Ninguno")) {
+            triage = "Triage 2";
+            enfermedad = "Efecto por medicamentos";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Ruidos intestinales")
+                && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
+            triage = "Triage 3";
+            enfermedad = "Infeccion respiratoria";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Ruidos intestinales")
+                && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
+            triage = "Triage 2";
+            enfermedad = "Infeccion bacteriana";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Ruidos intestinales")
+                && pacienteVO.getSintomaGeneral().equals("Cansancio")) {
+            triage = "Triage 1";
+            enfermedad = "Infeccion viral";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Ruidos intestinales")
+                && pacienteVO.getSintomaGeneral().equals("Ninguno")) {
+            triage = "Triage 1";
+            enfermedad = "Alergia";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Ninguno")
+                && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
+            triage = "Triage 1";
+            enfermedad = "Resfriado comun";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Ninguno")
+                && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
+            triage = "Triage 1";
+            enfermedad = "Migraña";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Ninguno")
+                && pacienteVO.getSintomaGeneral().equals("Cansancio")) {
+            triage = "Triage 3";
+            enfermedad = "Bronquitis";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Tos") && pacienteVO.getSintomaDigestivo().equals("Ninguno")
+                && pacienteVO.getSintomaGeneral().equals("Ninguno")) {
+            triage = "Triage 2";
+            enfermedad = "Alergia";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Vomito")
+                && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
+            triage = "Triage 2";
+            enfermedad = "Infeccion viral";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Vomito")
+                && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
+            triage = "Triage 1";
+            enfermedad = "Migraña";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Vomito")
+                && pacienteVO.getSintomaGeneral().equals("Cansancio")) {
+            triage = "Triage 3";
+            enfermedad = "Infeccion gastrointestinal";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Vomito")
+                && pacienteVO.getSintomaGeneral().equals("Ninguno")) {
+            triage = "Triage 2";
+            enfermedad = "Intoxicacion alimentaria";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
+                && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
+            triage = "Triage 2";
+            enfermedad = "Proceso inflamatorio";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
+                && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
+            triage = "Triage 3";
+            enfermedad = "Sindrome de intestino irritable";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
+                && pacienteVO.getSintomaGeneral().equals("Cansancio")) {
+            triage = "Triage 1";
+            enfermedad = "Deshidratacion";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Estreñimiento")
+                && pacienteVO.getSintomaGeneral().equals("Ninguno")) {
+            triage = "Triage 2";
+            enfermedad = "Trastornos gatrointestinales";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Ruidos intestinales")
+                && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
+            triage = "Triage 2";
+            enfermedad = "Enfermedad inflamatoria";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Ruidos intestinales")
+                && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
+            triage = "Triage 1";
+            enfermedad = "Migraña";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Ruidos intestinales")
+                && pacienteVO.getSintomaGeneral().equals("Cansancio")) {
+            triage = "Triage 2";
+            enfermedad = "Fatiga cronica";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Ruidos intestinales")
+                && pacienteVO.getSintomaGeneral().equals("Ninguno")) {
+            triage = "Triage 1";
+            enfermedad = "Trastornos gastrointestinales";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Ninguno")
+                && pacienteVO.getSintomaGeneral().equals("Fiebre")) {
+            triage = "Triage 2";
+            enfermedad = "Enfermedad autoinmune";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Ninguno")
+                && pacienteVO.getSintomaGeneral().equals("Dolor de cabeza")) {
+            triage = "Triage 1";
+            enfermedad = "Migraña";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Ninguno")
+                && pacienteVO.getSintomaGeneral().equals("Cansancio")) {
+            triage = "Triage 1";
+            enfermedad = "Fatiga cronica";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
+
+        if (pacienteVO.getSintomaRespiratorio().equals("Ninguno") && pacienteVO.getSintomaDigestivo().equals("Ninguno")
+                && pacienteVO.getSintomaGeneral().equals("Ninguno")) {
+            triage = "Ninguno";
+            enfermedad = "Ninguno";
+            pacienteVO.setTriage(triage);
+            pacienteVO.setEnfermedad(enfermedad);
+        }
 
         this.pacienteVO = pacienteVO;
 
